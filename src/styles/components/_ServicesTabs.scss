@@ -1,69 +1,10 @@
-// .service-tabs-wrapper {
-//     #simple-tabpanel-0{
-//         background-color: #bd8a7d20;
-//     }
-//     h1 {
-//         font-family: "Lora", serif;
-//         font-style: italic;
-//         color: $secondary-color;
-//         margin-top: 1rem;
-//         margin-bottom: 2rem;
-//     }
-//     .tab-slider {
-        
-//         overflow: hidden;
-//         padding: 1rem;
-//         .carousel {
-//             .slide {
-//                 //set height here
-//             }
-//         }
-//         .slider-image-wrapper-service{
-//             position: relative;
-//             .hotel-title{
-//                 position: absolute;
-//                 top: 10%;
-//                 color: $white;
-//                 font-size: 3rem;
-//                 text-align: center;
-//                 width: 100%;
-//             }
-//         }
-//     }
-//     .tab-content {
-//         position: relative;
-//         h1 {
-//             color: $nile-blue;
-//             font-style: normal;
-//         }
-//         ul {
-//             list-style-type: none;
-//             padding: 0;
-//             color: $nile-blue;
-//             li {
-//                 display: block;
-//             }
-//             li:before {
-//                 content: "• ";
-//             }
-//         }
-//         button{
-//             border: none;
-//             background-color: $primary-color;
-//             padding: 0.5rem 2rem;
-//             bottom: 0;
-//         }
-//     }
-// }
-
-
 .service-tabs-wrapper {
     background-color: #e2e2e220;
     .MuiTabs-flexContainer {
         justify-content: space-between;
     }
     .PrivateTabIndicator-colorSecondary-4 {
-        background-color: #8d6f30;
+        background-color: $primary-color;
     }
     button:focus {
         outline: none !important;
@@ -112,6 +53,7 @@
                 font-size: 14px;
                 color: gray;
                 display: block;
+                line-height: 30px;
             }
             li:before {
                 content: "• ";
@@ -139,6 +81,11 @@
             padding: 0;
             .slider-image-wrapper-service {
                 position: relative;
+                height: 100%;
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
                 .hotel-title {
                     position: absolute;
                     bottom: 7%;
@@ -158,6 +105,9 @@
             }
             ul {
                 font-size: smaller;
+                li {
+                    line-height: 20px;
+                }
             }
         }
     }

@@ -9,28 +9,52 @@ import Box from '@material-ui/core/Box';
 import { Grid, Paper } from '@material-ui/core';
 import { Carousel } from 'react-responsive-carousel';
 
-const sliderImages = [
-    {
-        image: require("assets/images/sliders/dining/Seyshima1.jpg"),
-        title: "Seyshima"
-    },
-    {
-        image: require("assets/images/sliders/dining/Seyshima2.jpg"),
-        title: "Eden"
-    },
-    {
-        image: require("assets/images/sliders/dining/Seyshima3.jpg"),
-        title: "Trader Vic's"
-    },
-    {
-        image: require("assets/images/sliders/dining/Seyshima4.jpg"),
-        title: "Vacos"
-    },
-    {
-        image: require("assets/images/sliders/dining/Seyshima5.jpg"),
-        title: "Ripple Pool Bar"
-    }
-]
+const sliderImages = {
+    dining: [
+        {
+            image: require("assets/images/sliders/dining/Seyshima.jpg"),
+            title: "Seyshima"
+        },
+        {
+            image: require("assets/images/sliders/dining/Eden.jpg"),
+            title: "Eden"
+        },
+        {
+            image: require("assets/images/sliders/dining/RipplesPoolBar.jpg"),
+            title: "Ripples Pool Bar"
+        },
+        {
+            image: require("assets/images/sliders/dining/Vascos.jpg"),
+            title: "Vascos"
+        },
+        {
+            image: require("assets/images/sliders/dining/Trader-Vicks.jpg"),
+            title: "Trader Vick's"
+        },
+    ],
+    beach: [
+        {
+            image: require("assets/images/sliders/white-beach/beach.jpg"),
+            title: "Beau Vallon Beach"
+        },
+    ],
+    spa: [
+        {
+            image: require("assets/images/sliders/spa-wellness/sesel-spa.jpg"),
+            title: "Sesel Spa"
+        },
+        {
+            image: require("assets/images/sliders/spa-wellness/sans-souci.jpg"),
+            title: "Sans Souci"
+        },
+    ],
+    sites: [
+        {
+            image: require("assets/images/sliders/sites/cathedral-of-our-lady.jpg"),
+            title: "Cathedral of Our Lady"
+        },
+    ],
+}
 
 
 function TabPanel(props) {
@@ -105,7 +129,7 @@ const ServiceTabs = (props) => {
                                 autoPlay={false}
                             >
                                 {
-                                    sliderImages.map(x => (
+                                    sliderImages.dining.map(x => (
                                         <div className="slider-image-wrapper-service">
                                             <img src={x.image} />
                                             <p className="hotel-title">{x.title}</p>
@@ -146,8 +170,8 @@ const ServiceTabs = (props) => {
                                 autoPlay={false}
                             >
                                 {
-                                    sliderImages.map(x => (
-                                        <div>
+                                    sliderImages.spa.map(x => (
+                                        <div className="slider-image-wrapper-service">
                                             <img src={x.image} />
                                             <p className="hotel-title">{x.title}</p>
                                         </div>
@@ -180,9 +204,10 @@ const ServiceTabs = (props) => {
                                 autoPlay={false}
                             >
                                 {
-                                    sliderImages.map(x => (
-                                        <div>
+                                    sliderImages.beach.map(x => (
+                                        <div className="slider-image-wrapper-service">
                                             <img src={x.image} />
+                                            <p className="hotel-title">{x.title}</p>
                                         </div>
                                     ))
                                 }
@@ -215,10 +240,10 @@ const ServiceTabs = (props) => {
                                 autoPlay={false}
                             >
                                 {
-                                    sliderImages.map(x => (
-                                        <div>
+                                    sliderImages.sites.map(x => (
+                                        <div className="slider-image-wrapper-service">
                                             <img src={x.image} />
-                                            <p className="hotel-title"></p>
+                                            <p className="hotel-title">{x.title}</p>
                                         </div>
                                     ))
                                 }
